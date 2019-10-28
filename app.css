@@ -20,7 +20,7 @@ h1 {
 }
 h2 {
   color: black;
-  font-size: 42px;
+  font-size: 35px;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -94,12 +94,12 @@ li {
 /* SECTION 3 - MAP AREA */
 .areas {
   text-align: center;
-  padding: 6% 3%;
+  padding: 6% 15%;
 }
 #us-map {
   border: 2px solid #ebebeb;
   padding: 5%;
-  width: 81%;
+  width: 91%;
   margin: 0 auto;
   display: block;
 }
@@ -108,7 +108,7 @@ li {
   fill: #00C7B1;
 }
 #info-box {
-  display: block;
+  display: none;
   padding: 10px;
   top: 50px;
   left: 50px;
