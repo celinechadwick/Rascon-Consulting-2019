@@ -7,7 +7,7 @@ body {
 }
 .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 .grid-item {
   padding:5%;
@@ -28,7 +28,6 @@ h3 {
   font-size: 22px;
   line-height: 1.5;
   font-weight:500;
-  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -57,7 +56,6 @@ li {
 .banner {
   height: auto;
   padding:2% 5% 6%;
-  background-color: #00C7B1;
   background-image: url('assets/banner.png');
   background-position: center;
   background-size: cover;
@@ -107,6 +105,9 @@ li {
 #MN, #MO, #KS, #IN, #PA, #MI, #OH, #WI, #NY {
   fill: #00C7B1;
 }
+#MN:hover, #MO:hover, #KS:hover, #IN:hover, #PA:hover, #MI:hover, #OH:hover, #WI:hover, #NY:hover {
+  fill: #68e8cf;
+}
 #info-box {
   display: none;
   padding: 10px;
@@ -129,11 +130,21 @@ li {
 
 /* SECTION 4 - CONTACT */
 .contact {
+  position: relative;
   padding: 6%;
   background-image:url('assets/footer-banner.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.form-success {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  background-color: #58c8b2;
 }
 .contact p {
   line-height: 1.5;
@@ -179,4 +190,77 @@ textarea {
   color: white;
   padding: 2%;
   text-align: left;
+}
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 640px){
+.banner {
+  padding: 3% 1% 150px;
+}
+.logo {
+  margin-bottom: 50px;
+}
+h2 {
+  font-size: 25px;
+}
+h3 {
+  font-size: 14px;
+}
+.green-header {
+  font-size: 10px;
+}
+.areas {
+  padding: 6% 0;
+}
+.map {
+  padding:2%;
+  margin: 5% auto;
+}
+p, label {
+  font-size: 14px;
+}
+.form-group {
+  width:80%;
+}
+.contact p {
+max-width: 90%;
+}
+
+}
+
+@media (max-width: 1024px){
+h1 {
+  font-size:40px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 18px;
+}
+li {
+  font-size: 15px;
+}
+.green-header {
+  font-size: 22px;
+}
+.down-arrow {
+  width: 35px;
+}
+p {
+  font-size: 15px;
+}
+}
+
+@media (max-width: 1200px){
+  h3 {
+    max-width: 100%;
+  }
+  .areas {
+    padding:6% 9%;
+  }
 }
