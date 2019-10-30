@@ -241,6 +241,7 @@
     $(document).ready(() => {
       $('.banner').hide()
                   .slideDown(1000);
+      $('.form-success').hide()
 
         const blink = () => {
         $downArrow.fadeOut(600);
@@ -276,7 +277,6 @@
       success: (data) => console.log('success',data),
       error: (err) => console.log('err', err),
       complete: () => {
-        console.log('complete', sender);
         $('.form-success')
           .html(`Thanks for your message ${sender||''}. We'll be in touch shortly.`)
           .slideDown(600);
