@@ -48,10 +48,14 @@ h3 {
 
 li {
   list-style: none;
-  margin: 7px 0;
+  margin: 10px;
   text-align: left;
 }
-
+li::before {
+  content: "\002B";
+  margin-right: 10px;
+  color: #00C7B1;
+}
 
 /* SECTION 1 - BANNER */
 .banner {
