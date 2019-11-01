@@ -274,13 +274,13 @@
       dataType: 'json',
       accepts: 'application/json',
       data: {sender, email, message},
-      success: (data) => console.log('success',data),
-      error: (err) => console.log('err', err),
       complete: () => {
         $('.form-success')
           .html(`Thanks for your message ${sender||''}. We'll be in touch shortly.`)
-          .slideDown(600);
-      }
+          .slideDown(600)
+          .delay(3000)
+          .slideUp(600)
+              }
     });
 
   })
